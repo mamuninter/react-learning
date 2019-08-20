@@ -1,5 +1,6 @@
 import React, { Fragment } from "react"
 import { connect } from 'react-redux'
+const axios = require('axios');
 
 class Form extends React.Component {
   constructor(props) {
@@ -17,7 +18,6 @@ class Form extends React.Component {
     const data = {
       name: this.state.name, 
       age: this.state.age, 
-      email: this.state.email
     };
     if (this.props.isEdit) {
       data.id = this.props.selectedData.id;
